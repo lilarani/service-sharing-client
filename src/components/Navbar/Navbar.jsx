@@ -1,6 +1,21 @@
+import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+
+  const handleLogOutUser = () => {
+    logOutUser()
+      .then(result => {
+        toast.success(`LogOut Successfully`);
+      })
+      .catch(error => {
+        toast.error(`LogOut Failed`);
+      });
+  };
+
   const links = (
     <>
       <li>
@@ -11,7 +26,7 @@ const Navbar = () => {
         <NavLink to={'/services'}>Services</NavLink>
       </li>
       <li>
-        <details className="dropdown">
+        <details className="dropdown ">
           <summary className="btn m-1">Dashboard</summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
             <li>
@@ -65,9 +80,23 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end flex gap-5">
-        <Link to={'/login'}>Login</Link>
-        <Link to={'/register'}>Register</Link>
+      <div className="navbar-end ">
+        {user ? (
+          <div className="flex flex-row gap-2">
+            <img
+              className="w-12 h-12 rounded-full"
+              src={user && user?.photoURL}
+              alt=""
+            />
+
+            <button onClick={handleLogOutUser}>Log-Out</button>
+          </div>
+        ) : (
+          <div className="space-x-2">
+            <Link to={'/login'}>Login</Link>
+            <Link to={'/register'}>Register</Link>
+          </div>
+        )}
       </div>
     </div>
   );

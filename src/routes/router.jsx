@@ -9,6 +9,9 @@ import AddService from '../Pages/AddService/AddService';
 import ManageService from './../Pages/ManageService/ManageService';
 import BookedServices from '../Pages/BookedServices/BookedServices';
 import ServiceToDo from '../Pages/ServiceToDo/ServiceToDo';
+import PrivetRouter from './PrivetRouter';
+import ServicesDetails from '../Pages/ServiceDetails/ServicesDetails';
+import AllServices from '../Pages/AllServices/AllServices';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/addService',
-        element: <AddService></AddService>,
+        element: (
+          <PrivetRouter>
+            <AddService></AddService>,
+          </PrivetRouter>
+        ),
       },
       {
         path: '/manageService',
@@ -51,6 +58,23 @@ const router = createBrowserRouter([
       {
         path: '/serviceToDo',
         element: <ServiceToDo></ServiceToDo>,
+      },
+
+      {
+        path: '/serviceDetails/:id',
+        element: (
+          <PrivetRouter>
+            <ServicesDetails></ServicesDetails>
+          </PrivetRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
+      },
+
+      {
+        path: '/allServices',
+        element: <AllServices></AllServices>,
+        loader: () => fetch(`http://localhost:5000/services`),
       },
     ],
   },

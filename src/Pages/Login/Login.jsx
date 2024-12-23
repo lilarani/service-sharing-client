@@ -1,6 +1,42 @@
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
+import toast from 'react-hot-toast';
+import { signInWithPopup } from 'firebase/auth';
+import { auth } from '../../firebase/firebase.config';
 
 const Login = () => {
+  const { userLogedIn, googleProvider } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogin = e => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+
+    userLogedIn(email, password)
+      .then(result => {
+        toast.success(`Login Successfully`);
+        navigate('/');
+      })
+      .catch(error => {
+        toast.error(`Login Failed`);
+      });
+  };
+
+  const handleLogedInWithGoogle = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(result => {
+        toast.success(`Login Successfully`);
+        navigate('/');
+      })
+      .catch(error => {
+        toast.error(`LogIn Failed`);
+      });
+  };
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -8,7 +44,7 @@ const Login = () => {
           <h2 className="text-center text-2xl font-semibold">
             Login your Account
           </h2>
-          <form className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -16,6 +52,7 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="email"
+                name="email"
                 className="input input-bordered"
                 required
               />
@@ -27,6 +64,7 @@ const Login = () => {
               <input
                 type="password"
                 placeholder="password"
+                name="password"
                 className="input input-bordered"
                 required
               />
@@ -41,7 +79,10 @@ const Login = () => {
                 Login
               </button>
             </div>
-            <p className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3 text-center text-white text-sm">
+            <p
+              onClick={handleLogedInWithGoogle}
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3 text-center text-white text-sm"
+            >
               Login with Google
             </p>
             <p>
