@@ -9,12 +9,10 @@ const ManageServices = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/bookedService?email=${user.email}`)
-      .then(data => {
-        setManageServices(data.data);
-      });
-  }, [manageServices]);
+    axios.get(`http://localhost:5000/my-services/${user.email}`).then(data => {
+      setManageServices(data.data);
+    });
+  }, []);
   console.log(manageServices);
 
   return (
@@ -23,13 +21,9 @@ const ManageServices = () => {
         <title> Service-Sharing | Manage Service</title>
       </Helmet>
       <h2 className="text-center font-bold text-2xl ">Manage Service</h2>
-      {manageServices.length === 0 ? (
-        <h2>Not Found</h2>
-      ) : (
-        manageServices.map(service => (
-          <ManageServices key={service._id} service={service}></ManageServices>
-        ))
-      )}
+      {manageServices.map(service => (
+        <ManageService key={service._id} service={service}></ManageService>
+      ))}
     </div>
   );
 };

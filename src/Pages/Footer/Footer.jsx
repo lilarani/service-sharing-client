@@ -5,9 +5,9 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
         <div>
-          <h3 className="text-xl font-bold">Movie Portal</h3>
+          <h3 className="text-xl font-bold">Service Sharing</h3>
           <p className="mt-2 text-sm text-gray-300">
-            Your one-stop destination for all things movies!
+            Your one-stop destination for all things services!
           </p>
         </div>
 
