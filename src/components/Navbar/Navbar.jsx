@@ -4,7 +4,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
 
 const Navbar = () => {
-  const { user, logOutUser } = useContext(AuthContext);
+  const { user, logOutUser, toggleTheme, theme } = useContext(AuthContext);
 
   const handleLogOutUser = () => {
     logOutUser()
@@ -23,12 +23,12 @@ const Navbar = () => {
       </li>
 
       <li>
-        <NavLink to={'/services'}>Services</NavLink>
+        <NavLink to={'/allServices'}>All Services</NavLink>
       </li>
       <li>
-        <details className="dropdown ">
+        <details className="dropdown z-50">
           <summary className="btn m-1">Dashboard</summary>
-          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+          <ul className="menu dropdown-content  rounded-box z-[1] w-52 p-2 shadow">
             <li>
               <NavLink to={'/addService'}>Add Service</NavLink>
             </li>
@@ -49,7 +49,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 ">
+    <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -80,7 +80,16 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
+
       <div className="navbar-end ">
+        <div className="mr-24">
+          <input
+            onClick={toggleTheme}
+            type="checkbox"
+            className="toggle"
+            defaultChecked
+          />
+        </div>
         {user ? (
           <div className="flex flex-row gap-2">
             <img

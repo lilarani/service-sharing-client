@@ -7,12 +7,12 @@ const PopularService = ({ service }) => {
   return (
     <div className="card bg-base-100 shadow-xl ">
       <figure>
-        <img className="w-full h-52" src={photo} alt="Shoes" />
+        <img className="w-full h-60" src={photo} alt="" />
       </figure>
       <div className="card-body space-y-2">
         <h2 className="card-title">{name}</h2>
-        <p>{description.slice(0, 100)}...</p>
         <p>Price: {price} BDT</p>
+        <p>Description: {description.slice(0, 100)}...</p>
         <div className="flex items-center gap-2">
           <div>
             <img

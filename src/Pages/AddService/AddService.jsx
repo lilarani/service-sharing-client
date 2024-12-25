@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useContext, useEffect } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AddService = () => {
   const { user } = useContext(AuthContext);
@@ -16,6 +17,7 @@ const AddService = () => {
     const description = form.description.value;
     let providerImage = user.photoURL;
     let providerName = user.displayName;
+    let providerEmail = user.email;
     e.target.reset();
 
     const newService = {
@@ -26,9 +28,19 @@ const AddService = () => {
       description,
       providerImage,
       providerName,
+      providerEmail,
     };
 
-    axios.post(`http://localhost:5000/services`, newService).then(data => {});
+    axios.post(`http://localhost:5000/services`, newService).then(data => {
+      if (data.data.insertedId) {
+        Swal.fire({
+          title: 'Success!',
+          text: 'Service Added Successfully',
+          icon: 'success',
+          confirmButtonText: 'Cool',
+        });
+      }
+    });
   };
 
   return (
