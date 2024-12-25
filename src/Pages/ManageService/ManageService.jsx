@@ -62,7 +62,7 @@ const ManageService = ({ service }) => {
           </Link>
           <Link
             to={`/serviceUpdate/${_id}`}
-            className="border-4 border-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-4 text-center text-base hover:bg-gradient-to-r hover:from-violet-500 hover:to-fuchsia-500 hover:text-white"
+            className="border-2 border-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-4 text-center text-base hover:bg-gradient-to-r hover:from-violet-500 hover:to-fuchsia-500 hover:text-white"
           >
             Update
           </Link>

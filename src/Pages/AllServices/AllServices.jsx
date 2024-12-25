@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const AllServices = () => {
@@ -11,6 +12,9 @@ const AllServices = () => {
 
   return (
     <div className="my-20">
+      <Helmet>
+        <title> Service-Sharing | All Services</title>
+      </Helmet>
       <h2 className="text-center text-3xl font-bold ">
         Explore Our Premium Services
       </h2>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useContext, useEffect } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const AddService = () => {
   const { user } = useContext(AuthContext);
@@ -45,6 +46,9 @@ const AddService = () => {
 
   return (
     <div className="lg:w-3/4 mx-auto">
+      <Helmet>
+        <title> Service-Sharing | Add Service</title>
+      </Helmet>
       <div className="text-center p-10">
         <h1 className="text-3xl font-bold">Add a Service!</h1>
         <p>

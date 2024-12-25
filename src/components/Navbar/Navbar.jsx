@@ -23,7 +23,7 @@ const Navbar = () => {
       </li>
 
       <li>
-        <NavLink to={'/allServices'}>All Services</NavLink>
+        <NavLink to={'/allServices'}> Services</NavLink>
       </li>
       <li>
         <details className="dropdown z-50">
