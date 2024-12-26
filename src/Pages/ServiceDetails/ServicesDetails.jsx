@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const ServicesDetails = () => {
   const servicesData = useLoaderData();
@@ -26,7 +27,6 @@ const ServicesDetails = () => {
     const instruction = form.instruction.value;
     const CurrentUserEmail = user.email;
     const CurrentUserName = user.displayName;
-    // console.log(date, instruction, CurrentUserEmail, CurrentUserName);
 
     let bookedInformation = {
       servicesId: _id,
@@ -42,12 +42,14 @@ const ServicesDetails = () => {
       providerImage: providerImage,
       serviceStatus: 'pending',
     };
-    console.log(bookedInformation);
 
     axios
-      .post(`http://localhost:5000/bookedService`, bookedInformation)
+      .post(
+        `https://service-sharing.vercel.app/bookedService`,
+        bookedInformation
+      )
       .then(data => {
-        console.log(data);
+        toast.success(`Service Booked Success`);
       });
   };
 

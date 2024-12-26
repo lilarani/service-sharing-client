@@ -3,21 +3,14 @@ import { CiFacebook, CiLinkedin } from 'react-icons/ci';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-6">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
+      <div className="container mx-auto flex flex-col justify-center items-center text-center">
         <div>
-          <h3 className="text-xl font-bold">Service Sharing</h3>
-          <p className="mt-2 text-sm text-gray-300">
-            Your one-stop destination for all things services!
+          <h3 className="text-2xl font-bold">Service Sharing</h3>
+          <p className="mt-2 text-sm text-gray-400 ">
+            Discover and share a wide range of services tailored to meet your
+            unique needs. <br /> From professional assistance to everyday
+            essentials, we bring everything closer to you!
           </p>
-        </div>
-
-        <div>
-          <h3 className="text-xl font-bold">Contact Us</h3>
-          <ul className="mt-2 space-y-1 text-sm text-gray-300">
-            <li>Email: support@movieportal.com</li>
-            <li>Phone: +1-234-567-890</li>
-            <li>Address: 123 Movie Street, Film City</li>
-          </ul>
         </div>
 
         <div>
