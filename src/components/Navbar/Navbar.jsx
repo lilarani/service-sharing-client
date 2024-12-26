@@ -80,8 +80,12 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <img className="w-16 h-16 rounded-full" src={logo} alt="" />
-        <a className="btn btn-ghost text-xl">Service Sharing</a>
+        <img
+          className="w-16 h-16 rounded-full hidden md:flexS"
+          src={logo}
+          alt=""
+        />
+        <a className=" text-base md:text-xl">Service Sharing</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
