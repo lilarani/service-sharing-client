@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
+import logo from '../../assets/images/logo.png';
 
 const Navbar = () => {
   const { user, logOutUser, toggleTheme, theme } = useContext(AuthContext);
@@ -75,6 +76,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
+        <img className="w-16 h-16 rounded-full" src={logo} alt="" />
         <a className="btn btn-ghost text-xl">Service Sharing</a>
       </div>
       <div className="navbar-center hidden lg:flex">

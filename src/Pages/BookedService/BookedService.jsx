@@ -9,7 +9,7 @@ const BookedService = ({ service }) => {
   } = service;
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 space-y-4 mt-20 container mx-auto">
+    <div className="flex flex-col md:flex-row gap-8 space-y-4 my-20 container mx-auto">
       <div className="space-y-6">
         <img className="w-96 h-52" src={image} alt="" />
       </div>
