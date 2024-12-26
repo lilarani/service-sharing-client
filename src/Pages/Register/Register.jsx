@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
+import { signInWithPopup } from 'firebase/auth';
+import { auth } from '../../firebase/firebase.config';
 
 const Register = () => {
   const { user, setUser, createNewUser, updateUserProfile, googleProvider } =
