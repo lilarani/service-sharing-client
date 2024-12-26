@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import PopularService from '../PopularService/PopularService';
+import 'aos/dist/aos.css';
 
 const PopularServices = () => {
   const [services, setServices] = useState([]);
@@ -13,7 +14,12 @@ const PopularServices = () => {
 
   return (
     <div className="py-10 container mx-auto">
-      <h1 className="text-center text-3xl font-semibold" data-aos="zoom-in-up">
+      <h1
+        className="text-center text-3xl font-semibold"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         Popular Service
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,12 @@ const Contact = () => {
 
   return (
     <div className="my-24 container mx-auto ">
-      <h2 className="font-bold text-3xl text-center" data-aos="zoom-in-down">
+      <h2
+        className="font-bold text-3xl text-center"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         Contact with Us
       </h2>
       <form onSubmit={handleSubmit}>

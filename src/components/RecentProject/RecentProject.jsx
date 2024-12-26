@@ -1,18 +1,22 @@
 import cleaning from '../../assets/images/cleaning-befor-after.jpeg';
-
 import gallery from '../../assets/images/Gallery of House HEIDE.jpg';
-
 import houseRepair from '../../assets/images/houseRepair.jpeg';
-
 import painting from '../../assets/images/img.jpg';
-
 import wallRepair from '../../assets/images/wll repair.jpg';
 import hair from '../../assets/images/hair.jpeg';
+import 'aos/dist/aos.css';
 
 const RecentProject = () => {
   return (
     <div className="container mx-auto my-24">
-      <h2 className="text-3xl font-bold text-center">Our Recent Projects</h2>
+      <h2
+        className="text-3xl font-bold text-center"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        Our Recent Projects
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hover:gap-10 mt-14">
         <div className="relative group">
