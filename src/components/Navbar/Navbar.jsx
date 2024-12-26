@@ -22,30 +22,34 @@ const Navbar = () => {
       <li>
         <NavLink to={'/'}>Home</NavLink>
       </li>
-
       <li>
         <NavLink to={'/allServices'}> Services</NavLink>
       </li>
-      <li>
-        <details className="dropdown z-50">
-          <summary className="btn m-1">Dashboard</summary>
-          <ul className="menu dropdown-content  rounded-box z-[1] w-52 p-2 ">
-            <li>
-              <NavLink to={'/addService'}>Add Service</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/manageService'}>Manage Service</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/bookedServices'}>Booked-Services</NavLink>
-            </li>
 
-            <li>
-              <NavLink to={'/serviceToDo'}>Service-To-Do</NavLink>
-            </li>
-          </ul>
-        </details>
-      </li>
+      {user ? (
+        <li>
+          <details className="dropdown z-50 bg-transparent">
+            <summary>Dashboard</summary>
+            <ul className="menu dropdown-content  rounded-box z-[1] w-52 p-2 ">
+              <li>
+                <NavLink to={'/addService'}>Add Service</NavLink>
+              </li>
+              <li>
+                <NavLink to={'/manageService'}>Manage Service</NavLink>
+              </li>
+              <li>
+                <NavLink to={'/bookedServices'}>Booked-Services</NavLink>
+              </li>
+
+              <li>
+                <NavLink to={'/serviceToDo'}>Service-To-Do</NavLink>
+              </li>
+            </ul>
+          </details>
+        </li>
+      ) : (
+        ' '
+      )}
     </>
   );
 

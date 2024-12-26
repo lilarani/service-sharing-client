@@ -31,7 +31,9 @@ const Contact = () => {
 
   return (
     <div className="my-24 container mx-auto ">
-      <h2 className="font-bold text-3xl text-center">Contact with Us</h2>
+      <h2 className="font-bold text-3xl text-center" data-aos="zoom-in-down">
+        Contact with Us
+      </h2>
       <form onSubmit={handleSubmit}>
         <div className="space-y-6 w-4/5 mx-auto mt-24">
           <div className="flex flex-col gap-2 text-base font-semibold">
