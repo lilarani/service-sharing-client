@@ -1,13 +1,15 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
 import { signInWithPopup } from 'firebase/auth';
 import { auth } from '../../firebase/firebase.config';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
   const { userLogedIn, googleProvider } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = e => {
     e.preventDefault();
@@ -45,7 +47,7 @@ const Login = () => {
             Login your Account
           </h2>
           <form onSubmit={handleLogin} className="card-body">
-            <div className="form-control">
+            <div className="form-control ">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
@@ -57,12 +59,18 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
+                <button
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute top-12 right-2"
+                >
+                  {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye />}
+                </button>
               </label>
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 placeholder="password"
                 name="password"
                 className="input input-bordered"

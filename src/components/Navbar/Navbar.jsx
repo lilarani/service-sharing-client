@@ -28,7 +28,7 @@ const Navbar = () => {
       <li>
         <details className="dropdown z-50">
           <summary className="btn m-1">Dashboard</summary>
-          <ul className="menu dropdown-content  rounded-box z-[1] w-52 p-2 shadow">
+          <ul className="menu dropdown-content  rounded-box z-[1] w-52 p-2 ">
             <li>
               <NavLink to={'/addService'}>Add Service</NavLink>
             </li>

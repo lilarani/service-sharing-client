@@ -12,11 +12,13 @@ import ServicesDetails from '../Pages/ServiceDetails/ServicesDetails';
 import AllServices from '../Pages/AllServices/AllServices';
 import ManageServices from '../Pages/ManageServices/ManageServices';
 import ServiceUpdate from '../Pages/ServiceUpdate/ServiceUpdate';
+import ErrPage from '../Pages/ErrPage/ErrPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayouts></MainLayouts>,
+    errorElement: <ErrPage></ErrPage>,
     children: [
       {
         path: '/',
