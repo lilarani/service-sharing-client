@@ -4,7 +4,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
 
 const Register = () => {
-  const { user, setUser, createNewUser, updateUserProfile } =
+  const { user, setUser, createNewUser, updateUserProfile, googleProvider } =
     useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -31,6 +31,17 @@ const Register = () => {
       })
       .catch(error => {
         console.log(`Failed to create user ${error.message}`);
+      });
+  };
+
+  const handleLogedInWithGoogle = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(result => {
+        toast.success(`Login Successfully`);
+        navigate('/');
+      })
+      .catch(error => {
+        toast.error(`LogIn Failed`);
       });
   };
 
@@ -94,7 +105,10 @@ const Register = () => {
                 Register
               </button>
             </div>
-            <p className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3 text-center text-white text-sm">
+            <p
+              onClick={handleLogedInWithGoogle}
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3 text-center text-white text-sm"
+            >
               Login with Google
             </p>
             <p>
