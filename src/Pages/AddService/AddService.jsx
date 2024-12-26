@@ -3,9 +3,11 @@ import { useContext, useEffect } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const AddService = () => {
   const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
 
   const handleAddService = e => {
     e.preventDefault();
@@ -32,7 +34,7 @@ const AddService = () => {
       providerEmail,
     };
 
-    axios.post(`http://localhost:5000/services`, newService).then(data => {
+    axiosSecure.post(`/services`, newService).then(data => {
       if (data.data.insertedId) {
         Swal.fire({
           title: 'Success!',

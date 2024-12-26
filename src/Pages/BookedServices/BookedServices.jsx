@@ -3,17 +3,17 @@ import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import BookedService from '../BookedService/BookedService';
 import { Helmet } from 'react-helmet-async';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const BookedServices = () => {
   const [bookedServices, setBookedServices] = useState([]);
   const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/bookedService?email=${user.email}`)
-      .then(data => {
-        setBookedServices(data.data);
-      });
+    axiosSecure.get(`/bookedService?email=${user.email}`).then(data => {
+      setBookedServices(data.data);
+    });
   }, []);
 
   return (

@@ -3,15 +3,17 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../Provider/AuthProvider';
 import SingleServiceToDo from '../SingleServiceToDo/SingleServiceToDo';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const ServiceToDo = () => {
   const { user } = useContext(AuthContext);
   const [serviceToDo, setServiceToDo] = useState([]);
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
     if (user?.email) {
-      axios
-        .get(`http://localhost:5000/information-service/${user.email}`)
+      axiosSecure
+        .get(`/information-service/${user.email}`)
         .then(data => setServiceToDo(data.data));
     }
   }, [user]);
