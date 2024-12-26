@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,8 +19,7 @@ const Contact = () => {
   // Handle form submission
   const handleSubmit = e => {
     e.preventDefault();
-
-    alert('Form submitted successfully!');
+    toast.success(`Form submitted successfully`);
     setFormData({
       name: '',
       email: '',
@@ -31,14 +31,7 @@ const Contact = () => {
 
   return (
     <div className="my-24 container mx-auto ">
-      <h2
-        className="font-bold text-3xl text-center"
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-      >
-        Contact with Us
-      </h2>
+      <h2 className="font-bold text-3xl text-center">Contact with Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="space-y-6 w-4/5 mx-auto mt-24">
           <div className="flex flex-col gap-2 text-base font-semibold">

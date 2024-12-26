@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <div className="navbar shadow-sm">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown z-50">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end ">
-        <div className="mr-24">
+        <div className="pr-6 md:pr-14">
           <input
             onClick={toggleTheme}
             type="checkbox"
@@ -98,7 +98,12 @@ const Navbar = () => {
               alt=""
             />
 
-            <button onClick={handleLogOutUser}>Log-Out</button>
+            <button
+              className="text-sm md:text-base font-bold"
+              onClick={handleLogOutUser}
+            >
+              Log-Out
+            </button>
           </div>
         ) : (
           <div className="space-x-2">

@@ -58,7 +58,7 @@ const ManageService = ({ service }) => {
         <div className="space-x-3 ml-20">
           <Link
             onClick={() => handleDelete(_id)}
-            className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-2 px-4 text-center text-white text-base "
+            className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-4 text-center text-white text-base "
           >
             Delete
           </Link>

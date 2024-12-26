@@ -19,8 +19,8 @@ const BookedService = ({ service }) => {
         <p>Taking Date: {date}</p>
         <p>Services Id: {id}</p>
       </div>
-      <div>
-        <p className="bg-green-600 text-white p-1 font-bold text-center">
+      <div className="w-28">
+        <p className="bg-green-600 text-white p-1 font-bold text-center text-sm">
           Status: {status}
         </p>
       </div>
