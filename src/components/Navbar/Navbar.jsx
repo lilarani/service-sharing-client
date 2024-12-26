@@ -83,7 +83,7 @@ const Navbar = () => {
 
         <Link to={'/'}>
           <img
-            className="w-16 h-16 rounded-full hidden md:flexS"
+            className="w-16 h-16 rounded-full hidden md:flex"
             src={logo}
             alt=""
           />
