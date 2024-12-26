@@ -8,6 +8,7 @@ import {
   signOut,
   updateProfile,
 } from 'firebase/auth';
+import axios from 'axios';
 
 export const AuthContext = createContext();
 
@@ -56,7 +57,32 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
-      setLoading(false);
+      if (currentUser?.email) {
+        const user = { email: currentUser.email };
+
+        axios
+          .post('http://localhost:5000/jwt', user, { withCredentials: true })
+          .then(response => {
+            console.log('login token', response.data);
+            setLoading(false);
+          })
+          .catch(error => {
+            console.error('Error fetching JWT token:', error);
+          });
+      } else {
+        axios
+          .post(
+            'http://localhost:5000/logout',
+            {},
+            {
+              withCredentials: true,
+            }
+          )
+          .then(res => {
+            console.log('logout', res.data);
+            setLoading(false);
+          });
+      }
     });
     return () => {
       unsubscribe();

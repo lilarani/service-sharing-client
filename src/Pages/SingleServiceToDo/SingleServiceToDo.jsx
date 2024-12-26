@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const SingleServiceToDo = ({ service }) => {
   const {
     servicesName: name,
@@ -7,22 +9,33 @@ const SingleServiceToDo = ({ service }) => {
     servicesPrice,
     providerName,
     providerImage,
+    _id,
+    serviceStatus,
   } = service;
 
-  const handleServiceStatus = e => {};
+  const handleServiceStatus = e => {
+    let status = e.target.value;
+    console.log(status, _id);
+
+    axios.put('http://localhost:5000/status', { id: _id, status: status });
+  };
 
   return (
-    <div className="card bg-base-100  shadow-xl">
+    <div className="card bg-base-100 bg-transparent shadow-xl border-[1px] border-gray-700">
       <figure>
         <img src={img} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title font-bold text-xl">{name}</h2>
         <p>Instructions: {instructions}</p>
         <p>Taking Date: {takingDate}</p>
         <p>Service Price: {servicesPrice}</p>
         <div>
-          <select onChange={handleServiceStatus} className="border-2">
+          <select
+            defaultValue={serviceStatus}
+            onChange={handleServiceStatus}
+            className="border-2"
+          >
             <option value="pending">Pending</option>
             <option value="working">Working</option>
             <option value="completed">Completed</option>

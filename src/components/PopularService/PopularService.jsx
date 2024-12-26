@@ -5,7 +5,7 @@ const PopularService = ({ service }) => {
   const { name, photo, price, area, description, providerImage, providerName } =
     service;
   return (
-    <div className="card bg-base-100 shadow-xl ">
+    <div className="card bg-base-100 bg-transparent shadow-xl border-[1px] border-gray-700">
       <figure>
         <img className="w-full h-60" src={photo} alt="" />
       </figure>

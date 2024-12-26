@@ -20,7 +20,7 @@ const BookedService = ({ service }) => {
         <p>Services Id: {id}</p>
       </div>
       <div>
-        <p className="bg-green-400 p-1 font-bold text-center">
+        <p className="bg-green-600 text-white p-1 font-bold text-center">
           Status: {status}
         </p>
       </div>

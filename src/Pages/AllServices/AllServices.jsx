@@ -39,9 +39,12 @@ const AllServices = () => {
           />
         </svg>
       </label>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-14 ">
         {filteredService.map(allService => (
-          <div key={allService._id} className="card bg-base-100 shadow-xl">
+          <div
+            key={allService._id}
+            className="card bg-base-100  bg-transparent shadow-xl border-[1px] border-gray-700"
+          >
             <figure>
               <img className="w-full h-60" src={allService.photo} alt="" />
             </figure>
