@@ -7,12 +7,12 @@ const PopularService = ({ service }) => {
   return (
     <div className="card bg-base-100 bg-transparent shadow-xl border-[1px] border-gray-700">
       <figure>
-        <img className="w-full h-60" src={photo} alt="" />
+        <img className="w-full h-52" src={photo} alt="" />
       </figure>
-      <div className="card-body space-y-2">
-        <h2 className="card-title">{name}</h2>
-        <p>Price: {price} BDT</p>
-        <p>Description: {description.slice(0, 100)}...</p>
+      <div className="card-body ">
+        <h2 className="card-title text-base">{name}</h2>
+        <p className="text-base">Price: {price} BDT</p>
+        <p className="text-xs">Description: {description.slice(0, 100)}...</p>
         <div className="flex items-center gap-2">
           <div>
             <img

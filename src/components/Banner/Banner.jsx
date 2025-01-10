@@ -31,35 +31,35 @@ const Banner = () => {
       >
         <SwiperSlide>
           <img
-            className="w-full h-[500px]"
+            className="w-full h-[350px]"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePA60MDWD9UaRqIfHrJcM_taxao8QgHUEVtvtZaZrxUAq6h47&s"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full h-[500px]"
+            className="w-full h-[350px]"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyz8_llCkXdpIT0pgMChsRZE6MHmsjbk4_ZYBCJEOT5h_KH8&s"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full h-[500px]"
+            className="w-full h-[350px]"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkdCtpecyFz80rC9Gj3dQJd6NBn29V8rRlLqdzigX141_QtQ&s"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full h-[500px]"
+            className="w-full h-[350px]"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjifgB3pBZ37_ob7i0FBPpLwTzTgZLdlFVwA9LE-H-gR2DT78&s"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-full h-[500px]"
+            className="w-full h-[350px]"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4SgQI4KiN5ilYfTOhSz00oiQUThK-MOXnfPaZ2IOHMgjldvs&s"
             alt=""
           />

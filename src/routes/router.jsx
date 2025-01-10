@@ -13,6 +13,7 @@ import AllServices from '../Pages/AllServices/AllServices';
 import ManageServices from '../Pages/ManageServices/ManageServices';
 import ServiceUpdate from '../Pages/ServiceUpdate/ServiceUpdate';
 import ErrPage from '../Pages/ErrPage/ErrPage';
+import AboutUs from '../Pages/AboutUs/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,7 @@ const router = createBrowserRouter([
           </PrivetRouter>
         ),
       },
+
       {
         path: '/manageService',
         element: (
@@ -53,6 +55,7 @@ const router = createBrowserRouter([
           </PrivetRouter>
         ),
       },
+
       {
         path: '/bookedServices',
         element: (
@@ -92,6 +95,10 @@ const router = createBrowserRouter([
         element: <ServiceUpdate></ServiceUpdate>,
         loader: ({ params }) =>
           fetch(`https://service-sharing.vercel.app/services/${params.id}`),
+      },
+      {
+        path: '/about',
+        element: <AboutUs></AboutUs>,
       },
     ],
   },
