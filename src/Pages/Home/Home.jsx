@@ -3,6 +3,7 @@ import Banner from '../../components/Banner/Banner';
 import PopularServices from '../../components/PopularServices/PopularServices';
 import RecentProject from '../../components/RecentProject/RecentProject';
 import Contact from '../../components/Contact/Contact';
+import Blog from '../Blog/Blog';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner></Banner>
       <PopularServices></PopularServices>
       <RecentProject></RecentProject>
+      <Blog></Blog>
       <Contact></Contact>
     </div>
   );

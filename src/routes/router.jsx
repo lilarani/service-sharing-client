@@ -14,6 +14,7 @@ import ManageServices from '../Pages/ManageServices/ManageServices';
 import ServiceUpdate from '../Pages/ServiceUpdate/ServiceUpdate';
 import ErrPage from '../Pages/ErrPage/ErrPage';
 import AboutUs from '../Pages/AboutUs/AboutUs';
+import Blog from '../Pages/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>,
       },
     ],
   },

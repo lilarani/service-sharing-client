@@ -6,9 +6,11 @@ const AllServices = () => {
   const allServicesData = useLoaderData();
   const [search, setSearch] = useState('');
 
-  const filteredService = allServicesData.filter(service =>
-    service.name.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredService = allServicesData
+    .filter(service =>
+      service.name.toLowerCase().includes(search.toLowerCase())
+    )
+    .sort((a, b) => b.price - a.price);
 
   return (
     <div className="my-20">
@@ -39,20 +41,22 @@ const AllServices = () => {
           />
         </svg>
       </label>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-14 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-14 ">
         {filteredService.map(allService => (
           <div
             key={allService._id}
             className="card bg-base-100  bg-transparent shadow-xl border-[1px] border-gray-700"
           >
             <figure>
-              <img className="w-full h-60" src={allService.photo} alt="" />
+              <img className="w-full h-52" src={allService.photo} alt="" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">{allService.name}</h2>
-              <p>Area: {allService.area}</p>
-              <p>Price: {allService.price}</p>
-              <p>Description: {allService.description.slice(0, 100)}...</p>
+              <h2 className="card-title text-xl">{allService.name}</h2>
+              <p className="text-base">Area: {allService.area}</p>
+              <p className="text-base">Price: {allService.price}</p>
+              <p className="text-xs">
+                Description: {allService.description.slice(0, 100)}...
+              </p>
 
               <div className="flex items-center gap-2">
                 <div>
