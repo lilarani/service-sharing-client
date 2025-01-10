@@ -4,11 +4,11 @@ const Blog = () => {
       <h1 className="text-3xl font-bold text-center mb-8">Our Service Blog</h1>
 
       {/* Cleaning Services */}
-      <div className="mb-6 flex items-center">
+      <div className="mb-6 flex flex-col md:flex-row items-center">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXe36mRdjgddqkA1XxJDqLeYZ9s6HYDce7JKMs31Vsm-5LoNw&s"
           alt="Cleaning Services"
-          className="w-1/3 h-64 object-cover mr-6"
+          className="w-full md:w-1/3 h-64 object-cover mr-6"
         />
         <div>
           <h2 className="text-2xl font-semibold">Cleaning Services</h2>
@@ -22,11 +22,11 @@ const Blog = () => {
       </div>
 
       {/* Cooking Services */}
-      <div className="mb-6 flex items-center">
+      <div className="mb-6 flex flex-col md:flex-row  items-center">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_hMqB3yelUA6cNJc0Riw6OP-X-FZhUkffpZOodXzjRoRqMHU&s"
           alt="Cooking Services"
-          className="w-1/3 h-64 object-cover mr-6"
+          className="w-full md:w-1/3 h-64 object-cover mr-6"
         />
         <div>
           <h2 className="text-2xl font-semibold">Cooking Services</h2>
@@ -40,11 +40,11 @@ const Blog = () => {
       </div>
 
       {/* Home Services */}
-      <div className="mb-6 flex items-center">
+      <div className="mb-6 flex flex-col md:flex-row items-center">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYuTBe7g-CVWmRmwtDYv3N9UxgehNRO8ZppEFeGyKlanvlIgKU&s"
           alt="Home Services"
-          className="w-1/3 h-64 object-cover mr-6"
+          className="w-full md:w-1/3 h-64 object-cover mr-6"
         />
         <div>
           <h2 className="text-2xl font-semibold">Home Services</h2>
@@ -58,11 +58,11 @@ const Blog = () => {
       </div>
 
       {/* Salon Treatments */}
-      <div className="mb-6 flex items-center">
+      <div className="mb-6 flex flex-col md:flex-row  items-center">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2zfrv2uYqw5uL3rIuZyFfAw52_ddj8XEY1K07VmGdEu7kEvy&s"
           alt="Salon Treatments"
-          className="w-1/3 h-64 object-cover mr-6"
+          className="w-full md:w-1/3 h-64 object-cover mr-6"
         />
         <div>
           <h2 className="text-2xl font-semibold">Salon Treatments</h2>
@@ -76,11 +76,11 @@ const Blog = () => {
       </div>
 
       {/* Beauty Parlour Services */}
-      <div className="mb-6 flex items-center">
+      <div className="mb-6 flex flex-col md:flex-row  items-center">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVl4ikM8aD8dR0z3q0hbB-aHKp9Bd_Irvq1bjpqq21Tgz9DG0&s"
           alt="Beauty Parlour Services"
-          className="w-1/3 h-64 object-cover mr-6"
+          className="w-full md:w-1/3 h-64 object-cover mr-6"
         />
         <div>
           <h2 className="text-2xl font-semibold">Beauty Parlour Services</h2>
