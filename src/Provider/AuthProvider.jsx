@@ -65,7 +65,7 @@ const AuthProvider = ({ children }) => {
             withCredentials: true,
           })
           .then(response => {
-            console.log('login token', response.data);
+            // console.log('login token', response.data);
             setLoading(false);
           })
           .catch(error => {
@@ -81,7 +81,7 @@ const AuthProvider = ({ children }) => {
             }
           )
           .then(res => {
-            console.log('logout', res.data);
+            // console.log('logout', res.data);
             setLoading(false);
           });
       }

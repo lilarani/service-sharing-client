@@ -68,7 +68,7 @@ const Register = () => {
         });
       })
       .catch(error => {
-        console.log(`Failed to create user ${error.message}`);
+        // console.log(`Failed to create user ${error.message}`);
       });
   };
 

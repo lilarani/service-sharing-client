@@ -15,7 +15,7 @@ const SingleServiceToDo = ({ service }) => {
 
   const handleServiceStatus = e => {
     let status = e.target.value;
-    console.log(status, _id);
+    // console.log(status, _id);
 
     axios.put('https://service-sharing.vercel.app/status', {
       id: _id,

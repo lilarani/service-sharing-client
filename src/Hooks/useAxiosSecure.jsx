@@ -17,16 +17,18 @@ const useAxiosSecure = () => {
         return response;
       },
       error => {
-        console.log('error cauth in interceptorss');
+        // console.log('error cauth in interceptorss');
 
         if (error.status === 401 || error.status === 403) {
-          console.log('need to logout the user');
+          // console.log('need to logout the user');
           logOutUser()
             .then(() => {
-              console.log('logged out user');
+              // console.log('logged out user');
               navigate('/login');
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+              // console.log(error);
+            });
         }
         return Promise.reject(error);
       }

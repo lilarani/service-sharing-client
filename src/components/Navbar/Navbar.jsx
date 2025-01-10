@@ -30,7 +30,7 @@ const Navbar = () => {
         <li>
           <details className="dropdown z-50 bg-transparent">
             <summary>Dashboard</summary>
-            <ul className="menu dropdown-content  rounded-box z-[1] w-52 p-2 ">
+            <ul className="menu dropdown-content bg-black text-white rounded-box z-[1] w-52 p-2 ">
               <li>
                 <NavLink to={'/addService'}>Add Service</NavLink>
               </li>
@@ -54,7 +54,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar shadow-sm">
+    <div className="navbar shadow-sm sticky top-0 z-50 backdrop:blur">
       <div className="navbar-start">
         <div className="dropdown z-50">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -75,7 +75,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-black text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {links}
           </ul>
