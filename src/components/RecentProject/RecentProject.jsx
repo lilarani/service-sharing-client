@@ -18,10 +18,10 @@ const RecentProject = () => {
         Our Recent Projects
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 hover:gap-10 mt-14">
-        <div className="relative group">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  mt-14">
+        <div className="relative group overflow-hidden">
           <img
-            className="w-full h-96 border-purple-600 border-2 shadow-md transform transition-transform duration-300 group-hover:scale-110"
+            className="w-full h-96 border-purple-600 border-2 shadow-md transform transition-transform duration-300 group-hover:scale-110 "
             src={cleaning}
             alt=""
           />
@@ -30,7 +30,7 @@ const RecentProject = () => {
           </div>
         </div>
 
-        <div className="relative group">
+        <div className="relative group overflow-hidden">
           <img
             className="w-full h-96 border-purple-600 border-2 shadow-md transform transition-transform duration-300 group-hover:scale-110"
             src={gallery}
@@ -41,7 +41,7 @@ const RecentProject = () => {
           </div>
         </div>
 
-        <div className="relative group">
+        <div className="relative group overflow-hidden">
           <img
             className="w-full h-96 border-purple-600 border-2 shadow-md transform transition-transform duration-300 group-hover:scale-110"
             src={houseRepair}
@@ -52,7 +52,7 @@ const RecentProject = () => {
           </div>
         </div>
 
-        <div className="relative group">
+        <div className="relative group overflow-hidden">
           <img
             className="w-full h-96 border-purple-600 border-2 shadow-md transform transition-transform duration-300 group-hover:scale-110"
             src={painting}
@@ -63,7 +63,7 @@ const RecentProject = () => {
           </div>
         </div>
 
-        <div className="relative group">
+        <div className="relative group overflow-hidden">
           <img
             className="w-full h-96 border-purple-600 border-2 shadow-md transform transition-transform duration-300 group-hover:scale-110"
             src={wallRepair}
@@ -74,7 +74,7 @@ const RecentProject = () => {
           </div>
         </div>
 
-        <div className="relative group">
+        <div className="relative group overflow-hidden">
           <img
             className="w-full h-96 border-purple-600 border-2 shadow-md transform transition-transform duration-300 group-hover:scale-110"
             src={hair}
