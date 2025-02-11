@@ -18,7 +18,7 @@ const Footer = () => {
           <ul className="flex justify-center md:justify-start space-x-4 mt-2 text-3xl">
             <li>
               <a
-                href="https://www.facebook.com/neelaa.rani"
+                href="https://www.facebook.com/lilaranii"
                 target="_blank"
                 className="hover:text-blue-500"
               >
@@ -27,7 +27,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/neela-rani"
+                href="https://www.linkedin.com/in/lilarani"
                 target="_blank"
                 className="hover:text-blue-400"
               >

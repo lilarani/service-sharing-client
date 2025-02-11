@@ -27,7 +27,7 @@ const ServiceUpdate = () => {
     };
 
     axios
-      .put(`https://service-sharing.vercel.app/services/${_id}`, updateService)
+      .put(`http://localhost:5000/services/${_id}`, updateService)
       .then(data => {
         if (data.data.modifiedCount > 0) {
           Swal.fire({

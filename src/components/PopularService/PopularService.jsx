@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const PopularService = ({ service }) => {
+  const { theme } = useContext(AuthContext);
   const { name, photo, price, area, description, providerImage, providerName } =
     service;
   return (
-    <div className="card bg-base-100 bg-transparent shadow-xl border-[1px] border-gray-700">
+    <div
+      className={`card bg-base-100 bg-transparent shadow-xl  ${
+        theme === 'dark' ? 'border-[1px] border-gray-700 ' : ''
+      }`}
+    >
       <figure>
         <img className="w-full h-52" src={photo} alt="" />
       </figure>

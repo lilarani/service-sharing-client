@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const AllServices = () => {
   const allServicesData = useLoaderData();
   const [search, setSearch] = useState('');
+  const { theme } = useContext(AuthContext);
 
   const filteredService = allServicesData
     .filter(service =>
@@ -45,7 +47,9 @@ const AllServices = () => {
         {filteredService.map(allService => (
           <div
             key={allService._id}
-            className="card bg-base-100  bg-transparent shadow-xl border-[1px] border-gray-700"
+            className={`card bg-base-100  bg-transparent shadow-xl  ${
+              theme === 'dark' ? 'border-[1px] border-gray-700' : ''
+            }`}
           >
             <figure>
               <img className="w-full h-52" src={allService.photo} alt="" />

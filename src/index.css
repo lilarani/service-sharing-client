@@ -15,3 +15,8 @@ body.dark {
 .nav {
   box-shadow: 0 4px 6px rgba(128, 128, 128, 0.3);
 }
+
+.active {
+  background-color: purple;
+  color: white;
+}

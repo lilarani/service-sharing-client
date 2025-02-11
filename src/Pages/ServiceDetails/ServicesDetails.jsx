@@ -44,10 +44,7 @@ const ServicesDetails = () => {
     };
 
     axios
-      .post(
-        `https://service-sharing.vercel.app/bookedService`,
-        bookedInformation
-      )
+      .post(`http://localhost:5000/bookedService`, bookedInformation)
       .then(data => {
         toast.success(`Service Booked Success`);
       });

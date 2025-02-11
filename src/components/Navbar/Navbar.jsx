@@ -60,7 +60,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar shadow-sm sticky top-0 z-50 backdrop:blur">
+    <div className="navbar shadow-sm sticky top-0 z-50 bg-transparent nav backdrop:blur">
       <div className="navbar-start">
         <div className="dropdown z-50">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -119,7 +119,7 @@ const Navbar = () => {
             />
 
             <button
-              className="text-sm md:text-base font-bold"
+              className="text-sm md:text-base font-bold border-[1px] border-purple-500  text-purple-500 hover:text-purple-600 px-3 "
               onClick={handleLogOutUser}
             >
               Log-Out
