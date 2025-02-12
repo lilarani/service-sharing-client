@@ -17,7 +17,7 @@ const BookedServices = () => {
   }, []);
 
   return (
-    <div className="my-24">
+    <div className="my-24 px-4">
       <Helmet>
         <title> Service-Sharing | Booked Service</title>
       </Helmet>

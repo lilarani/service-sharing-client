@@ -1,10 +1,10 @@
 const Blog = () => {
   return (
-    <div className="p-6 container mx-auto">
+    <div className="p-6 container mx-auto ">
       <h1 className="text-3xl font-bold text-center mb-8">Our Service Blog</h1>
 
       {/* Cleaning Services */}
-      <div className="mb-6 flex flex-col md:flex-row items-center">
+      <div className="mb-6 flex flex-col md:flex-row items-center mt-16">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXe36mRdjgddqkA1XxJDqLeYZ9s6HYDce7JKMs31Vsm-5LoNw&s"
           alt="Cleaning Services"

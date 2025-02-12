@@ -15,7 +15,7 @@ const AllServices = () => {
     .sort((a, b) => b.price - a.price);
 
   return (
-    <div className="my-20">
+    <div className="my-20 px-4 container mx-auto">
       <Helmet>
         <title> Service-Sharing | All Services</title>
       </Helmet>

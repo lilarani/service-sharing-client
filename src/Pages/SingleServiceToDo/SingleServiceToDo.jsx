@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const SingleServiceToDo = ({ service }) => {
   const {
@@ -12,6 +14,7 @@ const SingleServiceToDo = ({ service }) => {
     _id,
     serviceStatus,
   } = service;
+  const { theme } = useContext(AuthContext);
 
   const handleServiceStatus = e => {
     let status = e.target.value;
@@ -24,7 +27,11 @@ const SingleServiceToDo = ({ service }) => {
   };
 
   return (
-    <div className="card bg-base-100 bg-transparent shadow-xl border-[1px] border-gray-700">
+    <div
+      className={`card bg-base-100 bg-transparent shadow-xl  ${
+        theme === 'dark' ? 'border-[1px] border-gray-700 ' : ''
+      }`}
+    >
       <figure>
         <img src={img} alt="Shoes" />
       </figure>
