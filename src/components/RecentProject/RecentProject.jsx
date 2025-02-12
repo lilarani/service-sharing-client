@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 const RecentProject = () => {
   return (
-    <div className="container mx-auto my-24">
+    <div className="container mx-auto my-16 px-6">
       <h2
         className="text-3xl font-bold text-center"
         data-aos="fade-right"

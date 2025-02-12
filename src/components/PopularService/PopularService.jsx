@@ -6,6 +6,7 @@ const PopularService = ({ service }) => {
   const { theme } = useContext(AuthContext);
   const { name, photo, price, area, description, providerImage, providerName } =
     service;
+
   return (
     <div
       className={`card bg-base-100 bg-transparent shadow-xl  ${
@@ -13,7 +14,7 @@ const PopularService = ({ service }) => {
       }`}
     >
       <figure>
-        <img className="w-full h-52" src={photo} alt="" />
+        <img className="w-full h-52 px-6" src={photo} alt="" />
       </figure>
       <div className="card-body ">
         <h2 className="card-title text-base">{name}</h2>
