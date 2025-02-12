@@ -20,21 +20,58 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to={'/'}>Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white'
+              : ''
+          }
+          to={'/'}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/allServices'}> Services</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white'
+              : ''
+          }
+          to={'/allServices'}
+        >
+          {' '}
+          Services
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/about'}>About Us</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white'
+              : ''
+          }
+          to={'/about'}
+        >
+          About Us
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/blog'}>Blog</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white'
+              : ''
+          }
+          to={'/blog'}
+        >
+          Blog
+        </NavLink>
       </li>
 
       {user ? (
         <li>
-          <details className="dropdown z-50 bg-transparent">
+          <details className="dropdown z-50 bg-transparent ">
             <summary>Dashboard</summary>
             <ul className="menu dropdown-content bg-black text-white rounded-box z-[1] w-52 p-2 ">
               <li>
@@ -119,8 +156,8 @@ const Navbar = () => {
             />
 
             <button
-              className="text-sm md:text-base font-bold border-[1px] border-purple-500  text-purple-500 hover:text-purple-600 px-3 "
               onClick={handleLogOutUser}
+              className="border-[1px] text-purple-500 font-semibold hover:text-purple-600 px-2 text-sm border-purple-500"
             >
               Log-Out
             </button>
