@@ -16,7 +16,7 @@ const PopularService = ({ service }) => {
       <figure>
         <img className="w-full h-52 px-6" src={photo} alt="" />
       </figure>
-      <div className="card-body ">
+      <div className="card-body">
         <h2 className="card-title text-base">{name}</h2>
         <p className="text-base">Price: {price} BDT</p>
         <p className="text-xs">Description: {description.slice(0, 100)}...</p>
