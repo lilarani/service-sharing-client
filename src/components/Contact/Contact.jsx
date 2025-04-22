@@ -101,14 +101,14 @@ const Contact = () => {
                 rows={8}
                 name="message"
                 placeholder="write message"
-                className="border-2 focus:outline-none focus:border-purple-500  focus:shadow-sm"
+                className="border-2 focus:outline-none focus:border-purple-500 p-2 focus:shadow-sm"
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3 text-center text-white text-sm"
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3  text-center text-white text-sm"
             >
               Send Message
             </button>
