@@ -154,7 +154,7 @@ const Register = () => {
             </div>
             <p
               onClick={handleLogedInWithGoogle}
-              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3 text-center text-white text-sm"
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-1 px-3 text-center text-white text-sm cursor-pointer"
             >
               Login with Google
             </p>

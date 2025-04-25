@@ -83,19 +83,19 @@ const router = createBrowserRouter([
           </PrivetRouter>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://service-sharing.vercel.app/services/${params.id}`),
       },
 
       {
         path: '/allServices',
         element: <AllServices></AllServices>,
-        loader: () => fetch(`http://localhost:5000/allServices`),
+        loader: () => fetch(`https://service-sharing.vercel.app/allServices`),
       },
       {
         path: '/serviceUpdate/:id',
         element: <ServiceUpdate></ServiceUpdate>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://service-sharing.vercel.app/services/${params.id}`),
       },
       {
         path: '/about',

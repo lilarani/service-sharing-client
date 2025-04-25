@@ -17,15 +17,17 @@ const ManageService = ({ service }) => {
       confirmButtonText: 'Yes, delete it!',
     }).then(result => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/services/${_id}`).then(data => {
-          if (data.deleteCount > 0) {
-            Swal.fire({
-              title: 'Deleted!',
-              text: 'Your file has been deleted.',
-              icon: 'success',
-            });
-          }
-        });
+        axios
+          .delete(`https://service-sharing.vercel.app/services/${_id}`)
+          .then(data => {
+            if (data.deleteCount > 0) {
+              Swal.fire({
+                title: 'Deleted!',
+                text: 'Your file has been deleted.',
+                icon: 'success',
+              });
+            }
+          });
       }
     });
   };

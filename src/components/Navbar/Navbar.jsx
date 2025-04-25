@@ -23,7 +23,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white'
+              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white '
               : ''
           }
           to={'/'}
@@ -35,7 +35,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white'
+              ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center text-white '
               : ''
           }
           to={'/allServices'}
